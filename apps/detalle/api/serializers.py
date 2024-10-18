@@ -1,7 +1,7 @@
 from rest_framework.serializers import ModelSerializer
-from apps.detalle.models import DetallePedido
+from apps.detalle.models import Detalle
 
-class DetallePedidoSerializer(ModelSerializer):
+class DetalleSerializer(ModelSerializer):
     class Meta:
-        model = DetallePedido
-        fields = '__all__'
+        model = Detalle
+        fields = ['id','producto', 'cantidad', 'pedido','observaciones'  ]

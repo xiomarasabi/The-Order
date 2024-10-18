@@ -1,7 +1,13 @@
+from rest_framework.viewsets import ViewSet
 from rest_framework.viewsets import ModelViewSet
-from apps.detalle.models import DetallePedido
-from apps.detalle.api.serializers import DetallePedidoSerializer
+from apps.detalle.models import Detalle
+from apps.detalle.api.serializers import DetalleSerializer
+from apps.detalle.api.permissions import IsAdminOrReadOnly
 
-class DetallesModelViewset(ModelViewSet):
-    serializer_class= DetallePedidoSerializer
+
+
+class DetalleModelViewSet(ModelViewSet):
+    permission_classes = [IsAdminOrReadOnly]
+    serializer_class = DetalleSerializer
+    queryset = Detalle.objects.all()
     
