@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'apps.pedido',
     'apps.producto',
+    'apps.facturacion',
+    'apps.detalle',
+    'apps.zonaPreparacion',
 ]
 
 MIDDLEWARE = [
