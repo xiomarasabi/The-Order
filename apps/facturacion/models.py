@@ -11,3 +11,4 @@ class Factura(models.Model):
 
     def __str__(self):
         return f"{self.pedido}Valor a pagar:{self.cantidad.cantidad * self.producto.precio}"
+# se realizo el cambio
